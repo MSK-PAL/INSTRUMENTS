@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Add Instrument</title></head>
+<body>
+<h1>New Instrument</h1>
+<form th:action="@{/instruments}" th:object="${instrument}" method="post">
+    <label>Name: <input type="text" th:field="*{name}" /></label><br/>
+    <label>Type: <input type="text" th:field="*{type}" /></label><br/>
+    <label>Price: <input type="number" th:field="*{price}" /></label><br/>
+    <label>Status: <input type="text" th:field="*{status}" /></label><br/>
+    <button type="submit">Save</button>
+</form>
+</body>
+</html>
